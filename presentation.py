@@ -56,10 +56,10 @@ ylim = [1.0, 3.50]
 
 # Full slide plots
 phM.update_plot_params()
-#plot_HR_all_models(xlim=xlim, ylim=ylim)
-#plot_efold()
-#plot_acc_rate()
-#plot_acc_rate(xlim=xlim, ylim=ylim, save="Figures/acc_rates_zoomed.pdf", filter_models=(0.0, 0.5), colorbar=(1e-6, 1e-4, True))
+plot_HR_all_models(xlim=xlim, ylim=ylim)
+plot_efold()
+plot_acc_rate()
+plot_acc_rate(xlim=xlim, ylim=ylim, save="Figures/acc_rates_zoomed.pdf", filter_models=(0.0, 0.5), colorbar=(1e-6, 1e-4, True))
 
 # Half slide plots
 phM.update_plot_params(legend_width=0, fig_height_relative=0.7)
