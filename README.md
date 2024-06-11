@@ -20,3 +20,16 @@ It locates all available models within the specified grid directories.
 Failed models can be excluded by adding their name to the failed_models.txt file within the corresponding grid directory.
 
 The `plot_help_MESA.py` module uses the input models obtained from the `grid_help.py` module. 
+It generates a number of predefined plots such as `plot_HR` and soon a Kippenhahn(currently in the `plot_Kippen.py` module) and Kiel diagram.
+
+Similarly the `plot_help_GYRE.py` module uses the input models obtained from the `grid_help.py` module to plot GYRE data. 
+
+## Example Usage ##
+````python
+import grid_help as grh
+import plot_help_MESA as phM
+
+grid_directories = ["grid1", "grid2"]
+model_directories = grh.get_sorted_model_directories(grid_directoires)
+phM.plot_HR(model_directories)
+````
