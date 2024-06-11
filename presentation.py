@@ -1,4 +1,3 @@
-from matplotlib.pyplot import legend
 import grid_help as grh
 import plot_help_MESA as phM
 
