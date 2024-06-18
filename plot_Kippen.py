@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.legend_handler import HandlerTuple
+
+# from matplotlib.legend_handler import HandlerTuple
 
 import grid_help as grh
 import plot_help_MESA as phM
@@ -57,7 +58,7 @@ def plot_Kippenhahn(model, ax, first=True):
         history_data, star_age, "mix_type", "mix_qtop", plot_mix_type, ts, ax
     )
 
-    #setup_legend(fig, ax, star_age, star_mass)
+    # setup_legend(fig, ax, star_age, star_mass)
     # rewrite to set letter based on position of ax
     letter_top_left = "a" if first else "b"
     setup_axes(ax, star_age, star_mass, letter_top_left)
@@ -154,7 +155,7 @@ def setup_plot_elements(ax, star_age, star_mass):
         alpha=1,
     )
 
-    rad = ax.fill_between(x = star_age, y1 = star_mass, y2 = 0, color = 'lightgray', alpha = 1)
+    rad = ax.fill_between(x=star_age, y1=star_mass, y2=0, color="lightgray", alpha=1)
 
     return b1, b2, b3, b4, rad, conv, ov
 
@@ -168,6 +169,7 @@ def setup_axes(ax, star_age, star_mass, letter_top_left):
     ax.text(
         0.0125, 0.95, letter_top_left, ha="left", va="center", transform=ax.transAxes
     )
+
 
 grid_directories = ["grid_Kippenhahn"]
 model_directories = grh.get_sorted_model_directories(grid_directories)
